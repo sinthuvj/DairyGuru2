@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffff</color>
+    <color name="colorPrimaryDark">#ffff</color>
+    <color name="colorAccent">#ffff</color>
+    <color name="clear">#ff8000</color>
+    <color name="go">#009933</color>
+    <color name="toggleBtn">#007399</color>
+    <color name="defaultwhite">#ffffff</color>
+</resources>

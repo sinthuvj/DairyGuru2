@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jathu.sinthu.dairyguru.AboutDairyGuruActivity"
+    android:background="@drawable/aboutdairyguru_page">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollingParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:isScrollContainer="false">
+
+
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+
+
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            >
+
+            <Button
+                android:id="@+id/buttonBack"
+
+                android:layout_width="66dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonshape" />
+
+            <Spinner
+                android:id="@+id/selctor"
+                android:layout_width="282dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:entries="@array/equationlist"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="110dp"
+                android:paddingRight="10dp"
+                android:prompt="@string/month_promt"
+                android:textColor="@color/defaultwhite"
+                android:textSize="20dp"
+                android:gravity="center"
+                >
+
+
+            </Spinner>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:layout_gravity="center"
+                android:id="@+id/snf">
+
+
+                <TextView
+                    android:id="@+id/snfequation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@android:color/background_light"
+                    android:text="SNF = (fat*0.22) + (LR*0.25)+0.72"
+                    android:textSize="18dp"
+                />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:layout_gravity="center"
+                android:id="@+id/mega">
+
+
+                <TextView
+                    android:id="@+id/megaeqeq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@android:color/background_light"
+                    android:text="Mega farmer incentive is calculated according to the below LPD Ranges\n\n
+  40-100 =2Rs/L\n
+  100-150 = 3Rs/L\n
+  150 -200 = 4Rs/L\n
+  200 - 300 &amp; over 300 = 5Rs/L\n"
+                    android:textSize="18dp"
+                />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:layout_gravity="center"
+                android:id="@+id/opera">
+
+
+                <TextView
+                    android:id="@+id/operateq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@android:color/background_light"
+                    android:text="Operational commision is calculated according to the below LPD Ranges\n\n
+  30-50 =1000Rs\n
+  Next 25 range(50-75) = 0.25Rs/L\n
+  Next 25 range(75 - 100) = 0.5Rs/L\n
+  Next 50 range(100-150) = 0.75Rs/L\n
+  Next 350 range(150 - 500) = 1.0Rs/L\n
+  Over 500 = 15 000 Rs\n"
+                    android:textSize="18dp"
+                  />
+
+            </LinearLayout>
+
+            </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

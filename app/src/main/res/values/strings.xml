@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Dairy Guru</string>
+    <string name="fat_value">Fat</string>
+    <string name="lr_value">LR </string>
+    <string name="snf_value">SNF </string>
+    <string name="price_value">Price </string>
+    <string name="btn_clear">Clear </string>
+    <string name="btn_calculatesnf">Calculate</string>
+    <string name="toggle_on">Calculate SNF</string>
+    <string name="toggle_off">Calculate Price</string>
+    <string name="month_promt">Select month</string>
+    <string-array name="month_list">
+        <item>JANUARY</item>
+        <item>FEBRUARY</item>
+        <item>MARCH</item>
+        <item>APRIL</item>
+        <item>MAY</item>
+        <item>JUNE</item>
+        <item>JULY</item>
+        <item>AUGUST</item>
+        <item>SEPTEMBER</item>
+        <item>OCTOBER</item>
+        <item>NOVEMBER</item>
+        <item>DECEMBER</item>
+    </string-array>
+    <string-array name="equationlist">
+        <item>Calculate SNF</item>
+        <item>Calculate Mega Farmer Incentive</item>
+        <item>Calculate Operational Commision</item>
+    </string-array>
+</resources>

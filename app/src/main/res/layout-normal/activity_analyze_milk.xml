@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jathu.sinthu.dairyguru.AnalyzeMilkActivity"
+    android:background="@drawable/analysemilkpage"
+    android:isScrollContainer="false"
+    android:textColor="@color/defaultwhite">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollingParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:isScrollContainer="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <Button
+                android:id="@+id/buttonBack"
+
+                android:layout_width="66dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonshape" />
+
+
+            <ToggleButton
+                android:layout_gravity="center"
+                android:id="@+id/toggleButton"
+                android:layout_width="282dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="120dp"
+                android:background="@drawable/togglebutton"
+                android:checked="false"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Select Functionality"
+                android:textAllCaps="false"
+
+                android:textColor="@color/defaultwhite"
+                android:textOff="@string/toggle_off"
+                android:textOn="@string/toggle_on"
+                android:textSize="20dp"
+
+                />
+
+            <LinearLayout
+                android:id="@+id/calculateSNFContainer"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:visibility="visible">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_fat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:textColor="@color/defaultwhite"
+                    app:hintEnabled="false"
+                    app:errorTextAppearance="@color/clear">
+
+                    <EditText
+                        android:id="@+id/fat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:digits="0123456789."
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="@string/fat_value"
+                        android:inputType="number"
+                        android:textColor="@color/defaultwhite"
+                        android:textSize="20dp"
+
+
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_lr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:textColor="@color/defaultwhite"
+                    app:errorTextAppearance="@color/clear"
+                    app:hintEnabled="false"
+                    app:hintTextAppearance="@color/colorPrimary"
+                    app:theme="@style/Widget.Design.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/lr"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:digits="0123456789."
+
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="@string/lr_value"
+                        android:inputType="number"
+                        android:textColor="@color/defaultwhite"
+
+                        android:textSize="20dp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingTop="20dp">
+
+                    <Button
+
+                        android:id="@+id/btn_calculate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="53dp"
+                        android:background="@drawable/actionbutton"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/btn_calculatesnf"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="18dp" />
+
+
+                    <FrameLayout android:layout_width="50dp">
+
+                    </FrameLayout>
+
+                    <Button
+                        android:id="@+id/btn_clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="53dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/actionbutton"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/btn_clear"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="18dp" />
+
+                </TableRow>
+
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingLeft="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:paddingRight="30dp"
+                    android:paddingTop="15dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="10dp"
+                        android:textSize="24dp">
+
+                        <TextView
+                            android:id="@+id/table1snf1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/defaultwhite"
+                            android:textSize="26dp" />
+
+
+                        <TextView
+                            android:id="@+id/table1solid1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/defaultwhite"
+                            android:textSize="26dp"/>
+
+                        <TextView
+                            android:id="@+id/table1price1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/defaultwhite"
+                            android:textSize="26dp"/>
+                    </TableRow>
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="10dp">
+
+                        <TextView
+                            android:id="@+id/textView7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:fontFamily="sans-serif-condensed"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="40dp"
+                            android:text="SNF"
+                            android:textColor="@color/defaultwhite"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:fontFamily="sans-serif-condensed"
+                            android:paddingRight="40dp"
+                            android:text="Total Solid"
+                            android:textColor="@color/defaultwhite"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Price(Rs)"
+                            android:textColor="@color/defaultwhite"
+                            android:textSize="16dp" />
+
+
+                    </TableRow>
+
+
+                </TableLayout>
+
+            </LinearLayout>
+
+
+            <!--Next portion starts here-->
+            <LinearLayout
+                android:id="@+id/calculatePriceContainer"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_fat2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    app:hintEnabled="false">
+
+                    <EditText
+                        android:id="@+id/fat2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="0123456789."
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="@string/fat_value"
+                        android:inputType="number"
+                        android:textSize="20dp"
+                        android:textColor="@color/defaultwhite"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_snf2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    app:hintEnabled="false">
+
+                    <EditText
+                        android:id="@+id/snf2"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:digits="0123456789."
+
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="SNF"
+                        android:inputType="number"
+                        android:textSize="20dp"
+                        android:textColor="@color/defaultwhite"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingTop="20dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal">
+
+                        <Button
+                            android:id="@+id/btn_calculate_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/actionbutton"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="@string/btn_calculatesnf"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="18dp" />
+
+
+                        <FrameLayout android:layout_width="50dp">
+
+                        </FrameLayout>
+
+                        <Button
+                            android:id="@+id/btn_clear_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/actionbutton"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="@string/btn_clear"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="18dp" />
+
+                    </TableRow>
+
+                </LinearLayout>
+
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingTop="15dp">
+
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                      >
+
+
+                        <TextView
+                            android:id="@+id/table2solid2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textColor="@color/defaultwhite"
+                            android:textSize="26dp" />
+
+                        <TextView
+                            android:id="@+id/table2price2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textColor="@color/defaultwhite"
+                            android:textSize="26dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/defaultwhite"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:id="@+id/table2solid2label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:paddingRight="30dp"
+                            android:text="Total Solid"
+                            android:textColor="@color/defaultwhite"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/table2pricelabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Price(RS)"
+                            android:textColor="@color/defaultwhite"
+                            android:textSize="16dp" />
+
+
+                    </TableRow>
+
+
+                </TableLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

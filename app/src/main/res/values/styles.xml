@@ -1,0 +1,33 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">#ffff</item>
+        <item name="colorControlActivated">#ffff</item>
+        <item name="colorControlHighlight">#ffff</item>
+        <item name="android:textColorHint">@android:color/white</item>
+        <item name="android:textAppearanceListItemSmall">@style/MySpinnerStyle</item>
+
+    </style>
+
+    <style name="MySpinnerStyle" parent="TextAppearance.AppCompat.Subhead">
+        <item name="android:textColor">#ffff</item>
+    </style>
+
+<style name="SplashScreen" parent="Theme.AppCompat.DayNight.NoActionBar">
+
+
+
+</style>
+
+    <style name="pages" parent="Theme.AppCompat.NoActionBar">
+
+        <item name="colorControlActivated">#ffff</item>
+
+        </style>
+
+</resources>
